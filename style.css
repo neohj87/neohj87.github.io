@@ -327,6 +327,12 @@ main {
     font-size: 0.88rem;
 }
 
+.activity-desc {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
 /* Footer */
 footer {
     text-align: center;
