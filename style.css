@@ -22,6 +22,8 @@ body {
     line-height: 1.7;
     color: var(--text);
     background: var(--bg);
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 main, footer, .hero-inner {
