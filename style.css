@@ -1,0 +1,360 @@
+/* style.css */
+
+:root {
+    --navy: #16233f;
+    --navy-light: #24345a;
+    --accent: #3d7dfc;
+    --accent-soft: #eaf0ff;
+    --text: #222835;
+    --muted: #6b7280;
+    --line: #e5e8ee;
+    --bg: #f6f7fb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--bg);
+}
+
+main, footer, .hero-inner {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    color: #fff;
+    padding: 72px 24px 56px;
+}
+
+.eyebrow {
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #9db4e8;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.tagline {
+    font-size: 1.08rem;
+    color: #d4dcf2;
+    margin-bottom: 26px;
+}
+
+.contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact-pill {
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.contact-pill:hover {
+    background: rgba(255,255,255,0.22);
+}
+
+/* Sub-page hero (project detail pages) */
+.hero-sub {
+    padding: 48px 24px 40px;
+}
+
+.back-link {
+    display: inline-block;
+    color: #9db4e8;
+    text-decoration: none;
+    font-size: 0.88rem;
+    margin-bottom: 18px;
+}
+
+.back-link:hover {
+    color: #fff;
+}
+
+.hero-sub h1 {
+    font-size: 1.9rem;
+}
+
+/* Feature list (project detail pages) */
+.feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.feature-list li {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    font-size: 0.92rem;
+    color: var(--text);
+}
+
+.feature-list li strong {
+    display: block;
+    color: var(--navy);
+    margin-bottom: 6px;
+    font-size: 0.98rem;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    margin-top: 16px;
+}
+
+/* Sections */
+main {
+    padding: 48px 24px 20px;
+}
+
+.section {
+    margin-bottom: 52px;
+}
+
+.section h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--line);
+}
+
+.lead {
+    color: var(--text);
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.lead:last-child {
+    margin-bottom: 0;
+}
+
+/* Skill tags */
+.tag-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-list li {
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+/* Project cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.card-tag {
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+    color: var(--navy);
+}
+
+.card p {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+.card-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* Timeline */
+.timeline {
+    list-style: none;
+    position: relative;
+    padding-left: 28px;
+    border-left: 2px solid var(--line);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 36px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+.timeline-origin::before {
+    background: var(--muted);
+    box-shadow: 0 0 0 2px var(--muted);
+}
+
+.timeline-date {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+.sub-date {
+    font-weight: 400;
+    font-size: 0.78rem;
+}
+
+.timeline-body h3 {
+    font-size: 1.08rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.timeline-body h3 span {
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.timeline-body p {
+    font-size: 0.92rem;
+    color: var(--text);
+}
+
+.timeline-body .highlight {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.84rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.timeline-body ul {
+    margin-left: 18px;
+    font-size: 0.92rem;
+    color: var(--text);
+}
+
+.timeline-body ul li {
+    margin-bottom: 6px;
+}
+
+/* Plain lists */
+.plain-list {
+    list-style: none;
+}
+
+.plain-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.95rem;
+}
+
+.plain-list li:last-child {
+    border-bottom: none;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 32px 24px 56px;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 640px) {
+    .hero {
+        padding: 52px 20px 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 36px 20px 10px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
