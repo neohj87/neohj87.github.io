@@ -333,6 +333,29 @@ main {
     color: var(--text);
 }
 
+.activity-meta {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.activity-meta div {
+    display: flex;
+    gap: 12px;
+    font-size: 0.9rem;
+}
+
+.activity-meta dt {
+    flex: 0 0 64px;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.activity-meta dd {
+    color: var(--text);
+}
+
 /* Footer */
 footer {
     text-align: center;
